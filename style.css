@@ -33,7 +33,7 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 45px;
 }
 
 /* Feature List */
@@ -55,7 +55,7 @@ body {
   padding: 10px;
   margin-top: 20px;
   border-radius: 8px; /* Rounded corners for image */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for image */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for image */ */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
@@ -80,8 +80,8 @@ body {
   /* For Font Awesome */
   text-decoration: none;
   margin-right: 5px;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  margin-bottom: 10%;
+  margin-top: 25px;
 }
 .whatsapp-button:hover {
   background-color: green; /* Even darker blue on hover */
