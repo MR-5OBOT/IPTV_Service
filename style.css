@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("./shared/tvbg.jpg"); /* Background image */
+  background-size: cover; /* Cover the entire body */
+  background-position: center; /* Center the background image */
+  color: white; /* Default text color */
+}
+
+/* Main Content */
+.content {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */ */
+}
+
+/* Header Section */
+.header {
+  font-size: 10px;
+  /* font-family: "Roboto"; */
+  background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Subtle bottom border */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Feature List */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /* Margin for spacing */
+}
+
+.features li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for separation */
+}
+
+/* Pricing Section */
+.pricing {
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px; /* Rounded corners for image */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.pricing:hover {
+  transform: scale(1.05); /* Enlarge the image slightly on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow on hover */
+}
+
+.whatsapp-button {
+  background-color: #128c7e; /* WhatsApp green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.whatsapp-button i {
+  /* For Font Awesome */
+  text-decoration: none;
+  margin-right: 5px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.whatsapp-button:hover {
+  background-color: green; /* Even darker blue on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Add a WhatsApp icon to the contact button */
+.whatsapp-button::before {
+  font-size: 18px; /* Adjust the size as needed */
+  margin-right: 5px; /* Add a small gap between the icon and text */
+  color: #fff; /* White color for the icon */
+}
