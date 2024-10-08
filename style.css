@@ -45,6 +45,7 @@ body {
 
 .features li {
   padding: 10px 0;
+  margin-bottom: 5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for separation */
 }
 
