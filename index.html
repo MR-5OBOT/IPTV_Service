@@ -3,72 +3,212 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal Website" />
-    <link rel="icon" type="image/png" href="shared/logo.png" />
-    <link href="style.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Premium IPTV Service - High Quality Streaming"
+    />
+    <title>Premium IPTV Service</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <title>FSOCIETY-TV</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <main class="content">
-      <header class="header">
-        <div class="header-content">
-          <h1>FSOCIETY-TV</h1>
-          <a href="https://wa.me/message/IOTCSVVA45OTB1">
-            <img src="shared/logo.png" alt="Logo" class="logo" />
-          </a>
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <header class="hero">
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="IPTV Logo" />
+          <span>Premium IPTV</span>
         </div>
-      </header>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#channels">Channels</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact" class="btn">Get Started</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1>Ultimate Entertainment Experience</h1>
+        <p>
+          Access 10,000+ channels and 50,000+ movies & TV shows in HD quality
+        </p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn-primary">Explore Features</a>
+          <a href="#pricing" class="btn">View Pricing</a>
+        </div>
+      </div>
+    </header>
 
-      <section>
-        <h2>🔑 Why Choose Us:</h2>
-        <ul class="features">
-          <li>
-            🏆 Elite Sports Coverage – NFL, NBA, NHL, MLB, Soccer, and beyond
-          </li>
-          <li>
-            🎬 Blockbuster Movies & TV – Thousands of exclusive, on-demand
-            titles
-          </li>
-          <li>
-            🎥 Premium Networks – Unlock top-tier channels like HBO, Showtime,
-            and more
-          </li>
-          <li>
-            🚀 Crystal-Clear 4K Streaming – Ultra-smooth viewing with zero lag
-          </li>
-          <li>
-            📱 Universal Compatibility – Accessible on Smart TVs, smartphones,
-            tablets, and more
-          </li>
-          <li>
-            ⚡ Instant Access | 24/7 VIP Support | Satisfaction Guaranteed!
-          </li>
-        </ul>
-      </section>
+    <section id="features" class="features">
+      <h2>Why Choose Our Service?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-tv"></i>
+          <h3>10,000+ Live Channels</h3>
+          <p>International channels from 50+ countries</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-film"></i>
+          <h3>VOD Library</h3>
+          <p>Massive collection of movies and TV shows</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-hd"></i>
+          <h3>HD & 4K Quality</h3>
+          <p>Crystal clear streaming experience</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Multi-Device Support</h3>
+          <p>Watch on any device, anywhere</p>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <a href="https://wa.me/message/IOTCSVVA45OTB1" target="_blank">
-          <img src="shared/pricing.png" alt="Pricing Plans" class="pricing" />
-        </a>
-      </section>
+    <section id="pricing" class="pricing">
+      <h2>Simple, Transparent Pricing</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>1 Month</h3>
+          <div class="price">$15</div>
+          <ul>
+            <li><i class="fas fa-check"></i> Full HD Channels</li>
+            <li><i class="fas fa-check"></i> 24/7 Support</li>
+            <li><i class="fas fa-check"></i> All Features Included</li>
+          </ul>
+          <a href="#contact" class="btn">Subscribe Now</a>
+        </div>
+        <div class="price-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3>6 Months</h3>
+          <div class="price">$60</div>
+          <ul>
+            <li><i class="fas fa-check"></i> Full HD Channels</li>
+            <li><i class="fas fa-check"></i> 24/7 Support</li>
+            <li><i class="fas fa-check"></i> All Features Included</li>
+            <li><i class="fas fa-check"></i> 2 Connections</li>
+          </ul>
+          <a href="#contact" class="btn">Subscribe Now</a>
+        </div>
+        <div class="price-card">
+          <h3>12 Months</h3>
+          <div class="price">$100</div>
+          <ul>
+            <li><i class="fas fa-check"></i> Full HD Channels</li>
+            <li><i class="fas fa-check"></i> 24/7 Support</li>
+            <li><i class="fas fa-check"></i> All Features Included</li>
+            <li><i class="fas fa-check"></i> 3 Connections</li>
+          </ul>
+          <a href="#contact" class="btn">Subscribe Now</a>
+        </div>
+      </div>
+    </section>
 
-      <footer>
-        <a
-          class="whatsapp-button"
-          href="https://wa.me/message/IOTCSVVA45OTB1"
-          target="_blank"
-          rel="noopener noreferrer"
+    <section id="contact" class="contact">
+      <h2>Get Started Today</h2>
+      <p>Contact us on WhatsApp for instant setup</p>
+      <a href="https://wa.me/your_whatsapp_number" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+        Contact on WhatsApp
+      </a>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Premium IPTV Service. All rights reserved.</p>
+    </footer>
+
+    <div class="floating-trial">
+      <a href="#pricing" class="trial-button pulse">Try Free Demo</a>
+    </div>
+
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <section id="channels" class="channels">
+      <h2>Popular Channels</h2>
+      <div class="channel-categories">
+        <button
+          class="category active"
+          data-category="sports"
+          aria-label="Filter sports channels"
         >
-          <i class="fa-brands fa-whatsapp"></i>
-          Contact Us on WhatsApp
-        </a>
-      </footer>
-    </main>
+          Sports
+        </button>
+        <button class="category" data-category="movies">Movies</button>
+        <button class="category" data-category="kids">Kids</button>
+        <button class="category" data-category="news">News</button>
+      </div>
+      <div class="channel-grid">
+        <!-- Sports Channels -->
+        <div class="channel-logo" data-category="sports">
+          <img src="images/channels/espn.png" alt="ESPN" loading="lazy" />
+          <span class="channel-name">ESPN HD</span>
+        </div>
+        <div class="channel-logo" data-category="sports">
+          <img src="images/channels/sky-sports.png" alt="Sky Sports" />
+          <span class="channel-name">Sky Sports</span>
+        </div>
+        <div class="channel-logo" data-category="sports">
+          <img src="images/channels/bein.png" alt="beIN Sports" />
+          <span class="channel-name">beIN Sports</span>
+        </div>
+
+        <!-- Movie Channels -->
+        <div class="channel-logo" data-category="movies">
+          <img src="images/channels/hbo.png" alt="HBO" />
+          <span class="channel-name">HBO HD</span>
+        </div>
+        <div class="channel-logo" data-category="movies">
+          <img src="images/channels/netflix.png" alt="Netflix" />
+          <span class="channel-name">Netflix</span>
+        </div>
+        <div class="channel-logo" data-category="movies">
+          <img src="images/channels/disney.png" alt="Disney+" />
+          <span class="channel-name">Disney+</span>
+        </div>
+
+        <!-- Kids Channels -->
+        <div class="channel-logo" data-category="kids">
+          <img
+            src="images/channels/cartoon-network.png"
+            alt="Cartoon Network"
+          />
+          <span class="channel-name">Cartoon Network</span>
+        </div>
+        <div class="channel-logo" data-category="kids">
+          <img src="images/channels/nickelodeon.png" alt="Nickelodeon" />
+          <span class="channel-name">Nickelodeon</span>
+        </div>
+        <div class="channel-logo" data-category="kids">
+          <img src="images/channels/disney-junior.png" alt="Disney Junior" />
+          <span class="channel-name">Disney Junior</span>
+        </div>
+
+        <!-- News Channels -->
+        <div class="channel-logo" data-category="news">
+          <img src="images/channels/cnn.png" alt="CNN" />
+          <span class="channel-name">CNN HD</span>
+        </div>
+        <div class="channel-logo" data-category="news">
+          <img src="images/channels/bbc.png" alt="BBC News" />
+          <span class="channel-name">BBC News</span>
+        </div>
+        <div class="channel-logo" data-category="news">
+          <img src="images/channels/fox-news.png" alt="Fox News" />
+          <span class="channel-name">Fox News</span>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
