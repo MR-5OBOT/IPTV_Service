@@ -51,20 +51,21 @@ const channelLogos = document.querySelectorAll(".channel-logo");
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Remove active class from all buttons
-    categoryButtons.forEach((btn) => btn.classList.remove("active"));
-    // Add active class to clicked button
-    button.classList.add("active");
+    try {
+      categoryButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      
+      const category = button.dataset.category;
+      if (!category) throw new Error("Category not found");
 
-    const category = button.dataset.category;
-
-    channelLogos.forEach((logo) => {
-      if (category === "all" || logo.dataset.category === category) {
-        logo.style.display = "block";
-      } else {
-        logo.style.display = "none";
-      }
-    });
+      channelLogos.forEach((logo) => {
+        logo.style.display = (category === "all" || logo.dataset.category === category) ? "block" : "none";
+      });
+    } catch (error) {
+      console.error("Error filtering channels:", error);
+      // Fallback to showing all channels
+      channelLogos.forEach(logo => logo.style.display = "block");
+    }
   });
 });
 
@@ -91,13 +92,18 @@ const observerOptions = {
   rootMargin: "50px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("fade-in");
       observer.unobserve(entry.target);
     }
   });
+  
+  // Disconnect observer if all elements are loaded
+  if (document.querySelectorAll('.fade-in').length === document.querySelectorAll('.feature-card, .price-card, .channel-logo').length) {
+    observer.disconnect();
+  }
 }, observerOptions);
 
 document
@@ -105,3 +111,21 @@ document
   .forEach((el) => {
     observer.observe(el);
   });
+
+// Add this function to handle WhatsApp redirects
+function redirectToWhatsApp(message = '') {
+    const phoneNumber = '212723457934';
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+}
+
+// Update all pricing buttons
+document.querySelectorAll('.price-card .btn-primary, .trial-button, .whatsapp-button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const planName = button.closest('.price-card')?.querySelector('h3')?.textContent || 'General';
+        const message = `Hi, I'm interested in the ${planName} plan. Can you provide more information?`;
+        redirectToWhatsApp(message);
+    });
+});

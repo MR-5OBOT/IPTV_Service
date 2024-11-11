@@ -17,6 +17,9 @@ body {
   line-height: 1.6;
   background: var(--dark-color);
   color: var(--light-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -161,6 +164,20 @@ nav {
   backdrop-filter: blur(10px);
   padding: 2.5rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .price {
@@ -170,8 +187,25 @@ nav {
   margin: 1.5rem 0;
 }
 
+.price-card ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.price-card ul li {
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-card ul li i {
+  color: var(--primary-color);
+}
+
 .popular {
   border: 2px solid var(--primary-color);
+  transform: scale(1.05);
 }
 
 .popular-badge {
@@ -182,6 +216,8 @@ nav {
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(33, 150, 243, 0.3);
 }
 
 .whatsapp-button {
@@ -533,4 +569,171 @@ nav {
     bottom: 20px;
     right: 20px;
   }
+}
+
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .btn, .btn-primary {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Update WhatsApp button styles */
+.whatsapp-button, 
+.btn-primary,
+.trial-button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-button i,
+.btn-primary i,
+.trial-button i {
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo span {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 30px;
+  }
+  
+  .logo span {
+    font-size: 1rem;
+  }
+}
+
+/* Updated Channel Section Styles */
+.channels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.channel-filter {
+  min-width: 200px;
+}
+
+.channel-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.channel-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3);
+}
+
+.channel-select option {
+  background: var(--dark-color);
+  color: white;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .channels-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .channel-filter {
+    width: 100%;
+  }
+}
+
+.feature-details {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.feature-details li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-details li:before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #007bff;
+}
+
+.feature-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0,123,255,0.05);
+  border-radius: 10px;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlight i {
+  color: #007bff;
 }
